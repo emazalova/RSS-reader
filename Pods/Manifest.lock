@@ -1,0 +1,12 @@
+PODS:
+  - ViperMcFlurry (1.5.2)
+
+DEPENDENCIES:
+  - ViperMcFlurry
+
+SPEC CHECKSUMS:
+  ViperMcFlurry: 701bc3ad8d188b1f1e157ec0ddf4e77184de88b5
+
+PODFILE CHECKSUM: e7cc854b0a5cc7aa9f17fba5445383780c19bf58
+
+COCOAPODS: 1.2.0
