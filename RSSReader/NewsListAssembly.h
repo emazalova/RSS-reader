@@ -1,13 +1,13 @@
 //
-//  NSString+DateFormat.m
+//  NewsListAssembly.h
 //  RSSReader
 //
 //  Created by Katrin on 18.02.17.
 //  Copyright © 2017 Katrin Mazalova. All rights reserved.
 //
 
-#import "NSString+DateFormat.h"
+#import <Foundation/Foundation.h>
 
-@implementation NSString (DateFormat)
+@interface NewsListAssembly : NSObject
 
 @end

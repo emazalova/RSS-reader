@@ -1,13 +1,13 @@
 //
-//  NSString+DateFormat.m
+//  NewsListRouterInput.h
 //  RSSReader
 //
 //  Created by Katrin on 18.02.17.
 //  Copyright © 2017 Katrin Mazalova. All rights reserved.
 //
 
-#import "NSString+DateFormat.h"
+#import <Foundation/Foundation.h>
 
-@implementation NSString (DateFormat)
+@protocol NewsListRouterInput <NSObject>
 
 @end
