@@ -9,12 +9,23 @@
 /* Begin PBXBuildFile section */
 		54167AEB1E560F55000C4444 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54167AEA1E560F55000C4444 /* main.m */; };
 		54167AEE1E560F55000C4444 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54167AED1E560F55000C4444 /* AppDelegate.m */; };
-		54167AF11E560F55000C4444 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54167AF01E560F55000C4444 /* ViewController.m */; };
 		54167AF41E560F55000C4444 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54167AF21E560F55000C4444 /* Main.storyboard */; };
 		54167AF61E560F55000C4444 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54167AF51E560F55000C4444 /* Assets.xcassets */; };
 		54167AF91E560F55000C4444 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54167AF71E560F55000C4444 /* LaunchScreen.storyboard */; };
 		54167B041E560F55000C4444 /* RSSReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54167B031E560F55000C4444 /* RSSReaderTests.m */; };
 		54167B0F1E560F55000C4444 /* RSSReaderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54167B0E1E560F55000C4444 /* RSSReaderUITests.m */; };
+		54167B2C1E570E62000C4444 /* NewsListInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 54167B2B1E570E62000C4444 /* NewsListInteractor.m */; };
+		54167B311E57121A000C4444 /* XMLParserImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = 54167B301E57121A000C4444 /* XMLParserImplementation.m */; };
+		54167B361E5746E6000C4444 /* NewsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54167B351E5746E6000C4444 /* NewsListViewController.m */; };
+		54167B3A1E575C19000C4444 /* NewsListPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 54167B391E575C19000C4444 /* NewsListPresenter.m */; };
+		54E0CF0C1E5776CA0067384E /* NewsListDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E0CF0B1E5776CA0067384E /* NewsListDataDisplayManager.m */; };
+		54E0CF111E57790F0067384E /* NewsListCellObjectFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E0CF101E57790F0067384E /* NewsListCellObjectFactory.m */; };
+		54E0CF151E578EBF0067384E /* NewsListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E0CF141E578EBF0067384E /* NewsListCell.m */; };
+		54E0CF1C1E579CD60067384E /* NewsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E0CF1B1E579CD60067384E /* NewsList.m */; };
+		54E0CF251E583DB70067384E /* NewsListAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E0CF241E583DB70067384E /* NewsListAssembly.m */; };
+		54E0CF281E584C450067384E /* NewsListRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E0CF271E584C450067384E /* NewsListRouter.m */; };
+		54E0CF2C1E5873770067384E /* NSString+DateFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E0CF2B1E5873770067384E /* NSString+DateFormat.m */; };
+		9DBFB9F4872DAB1B69DD6037 /* Pods_RSSReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D79C3AA3804049738AF38C22 /* Pods_RSSReader.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3AE1F56D65E2E15209A09D27 /* Pods-RSSReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSSReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSSReader/Pods-RSSReader.release.xcconfig"; sourceTree = "<group>"; };
 		54167AE61E560F55000C4444 /* RSSReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54167AEA1E560F55000C4444 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		54167AEC1E560F55000C4444 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		54167AED1E560F55000C4444 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		54167AEF1E560F55000C4444 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		54167AF01E560F55000C4444 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		54167AF31E560F55000C4444 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		54167AF51E560F55000C4444 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54167AF81E560F55000C4444 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +61,38 @@
 		54167B0A1E560F55000C4444 /* RSSReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSSReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54167B0E1E560F55000C4444 /* RSSReaderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSSReaderUITests.m; sourceTree = "<group>"; };
 		54167B101E560F55000C4444 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54167B291E570DB0000C4444 /* NewsListInteractorInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListInteractorInput.h; sourceTree = "<group>"; };
+		54167B2A1E570E62000C4444 /* NewsListInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListInteractor.h; sourceTree = "<group>"; };
+		54167B2B1E570E62000C4444 /* NewsListInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListInteractor.m; sourceTree = "<group>"; };
+		54167B2D1E570F34000C4444 /* NewsListInteractorOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListInteractorOutput.h; sourceTree = "<group>"; };
+		54167B2F1E57121A000C4444 /* XMLParserImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLParserImplementation.h; sourceTree = "<group>"; };
+		54167B301E57121A000C4444 /* XMLParserImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParserImplementation.m; sourceTree = "<group>"; };
+		54167B321E57125E000C4444 /* XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLParser.h; sourceTree = "<group>"; };
+		54167B331E57462B000C4444 /* NewsListViewInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListViewInput.h; sourceTree = "<group>"; };
+		54167B341E5746E6000C4444 /* NewsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListViewController.h; sourceTree = "<group>"; };
+		54167B351E5746E6000C4444 /* NewsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListViewController.m; sourceTree = "<group>"; };
+		54167B371E574847000C4444 /* NewsListViewOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListViewOutput.h; sourceTree = "<group>"; };
+		54167B381E575C19000C4444 /* NewsListPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListPresenter.h; sourceTree = "<group>"; };
+		54167B391E575C19000C4444 /* NewsListPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListPresenter.m; sourceTree = "<group>"; };
+		54E0CF0A1E5776CA0067384E /* NewsListDataDisplayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListDataDisplayManager.h; sourceTree = "<group>"; };
+		54E0CF0B1E5776CA0067384E /* NewsListDataDisplayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListDataDisplayManager.m; sourceTree = "<group>"; };
+		54E0CF0F1E57790F0067384E /* NewsListCellObjectFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListCellObjectFactory.h; sourceTree = "<group>"; };
+		54E0CF101E57790F0067384E /* NewsListCellObjectFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListCellObjectFactory.m; sourceTree = "<group>"; };
+		54E0CF131E578EBF0067384E /* NewsListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListCell.h; sourceTree = "<group>"; };
+		54E0CF141E578EBF0067384E /* NewsListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListCell.m; sourceTree = "<group>"; };
+		54E0CF171E579B9F0067384E /* NewsListConfigurableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListConfigurableCell.h; sourceTree = "<group>"; };
+		54E0CF1A1E579CD60067384E /* NewsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsList.h; sourceTree = "<group>"; };
+		54E0CF1B1E579CD60067384E /* NewsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsList.m; sourceTree = "<group>"; };
+		54E0CF1E1E579D110067384E /* CellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellObject.h; sourceTree = "<group>"; };
+		54E0CF231E583DB70067384E /* NewsListAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListAssembly.h; sourceTree = "<group>"; };
+		54E0CF241E583DB70067384E /* NewsListAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListAssembly.m; sourceTree = "<group>"; };
+		54E0CF261E584C450067384E /* NewsListRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListRouter.h; sourceTree = "<group>"; };
+		54E0CF271E584C450067384E /* NewsListRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListRouter.m; sourceTree = "<group>"; };
+		54E0CF291E584CC30067384E /* NewsListRouterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListRouterInput.h; sourceTree = "<group>"; };
+		54E0CF2A1E5873770067384E /* NSString+DateFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DateFormat.h"; sourceTree = "<group>"; };
+		54E0CF2B1E5873770067384E /* NSString+DateFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DateFormat.m"; sourceTree = "<group>"; };
+		C099F0ADBC13FE98D919CDDC /* Pods-RSSReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSSReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSSReader/Pods-RSSReader.debug.xcconfig"; sourceTree = "<group>"; };
+		D79C3AA3804049738AF38C22 /* Pods_RSSReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSSReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DBFB9F4872DAB1B69DD6037 /* Pods_RSSReader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +128,8 @@
 				54167B021E560F55000C4444 /* RSSReaderTests */,
 				54167B0D1E560F55000C4444 /* RSSReaderUITests */,
 				54167AE71E560F55000C4444 /* Products */,
+				A2E996C99AE65C305F103E69 /* Pods */,
+				5CD41FC4DE132991A1B35C3F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +146,9 @@
 		54167AE81E560F55000C4444 /* RSSReader */ = {
 			isa = PBXGroup;
 			children = (
+				54167B1C1E56208D000C4444 /* NewsList */,
 				54167AEC1E560F55000C4444 /* AppDelegate.h */,
 				54167AED1E560F55000C4444 /* AppDelegate.m */,
-				54167AEF1E560F55000C4444 /* ViewController.h */,
-				54167AF01E560F55000C4444 /* ViewController.m */,
 				54167AF21E560F55000C4444 /* Main.storyboard */,
 				54167AF51E560F55000C4444 /* Assets.xcassets */,
 				54167AF71E560F55000C4444 /* LaunchScreen.storyboard */,
@@ -140,6 +184,188 @@
 			path = RSSReaderUITests;
 			sourceTree = "<group>";
 		};
+		54167B1C1E56208D000C4444 /* NewsList */ = {
+			isa = PBXGroup;
+			children = (
+				54E0CF1F1E57A6350067384E /* Extensions */,
+				54167B1D1E5620AB000C4444 /* Assembly */,
+				54167B1E1E5620B0000C4444 /* Interactor */,
+				54167B1F1E5620BB000C4444 /* Presenter */,
+				54167B201E5620C7000C4444 /* Router */,
+				54167B211E5620CE000C4444 /* View */,
+			);
+			name = NewsList;
+			sourceTree = "<group>";
+		};
+		54167B1D1E5620AB000C4444 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				54E0CF231E583DB70067384E /* NewsListAssembly.h */,
+				54E0CF241E583DB70067384E /* NewsListAssembly.m */,
+			);
+			name = Assembly;
+			sourceTree = "<group>";
+		};
+		54167B1E1E5620B0000C4444 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				54E0CF1D1E579D000067384E /* CellObject */,
+				54E0CF181E579CA30067384E /* Models */,
+				54167B2E1E57120F000C4444 /* XMLParser */,
+				54167B2A1E570E62000C4444 /* NewsListInteractor.h */,
+				54167B2B1E570E62000C4444 /* NewsListInteractor.m */,
+				54167B291E570DB0000C4444 /* NewsListInteractorInput.h */,
+				54167B2D1E570F34000C4444 /* NewsListInteractorOutput.h */,
+				54167B231E5621A1000C4444 /* PlainObjectMapper */,
+				54167B221E562197000C4444 /* UserInputValidator */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		54167B1F1E5620BB000C4444 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				54167B371E574847000C4444 /* NewsListViewOutput.h */,
+				54167B381E575C19000C4444 /* NewsListPresenter.h */,
+				54167B391E575C19000C4444 /* NewsListPresenter.m */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		54167B201E5620C7000C4444 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				54E0CF261E584C450067384E /* NewsListRouter.h */,
+				54E0CF271E584C450067384E /* NewsListRouter.m */,
+				54E0CF291E584CC30067384E /* NewsListRouterInput.h */,
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
+		54167B211E5620CE000C4444 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				54E0CF161E579B740067384E /* NewsListConfigurableCell */,
+				54E0CF121E578E880067384E /* NewsListCell */,
+				54E0CF0D1E5778B10067384E /* CellObjectFactory */,
+				54E0CF091E5776B00067384E /* DataDisplayManager */,
+				54167B331E57462B000C4444 /* NewsListViewInput.h */,
+				54167B341E5746E6000C4444 /* NewsListViewController.h */,
+				54167B351E5746E6000C4444 /* NewsListViewController.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		54167B221E562197000C4444 /* UserInputValidator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = UserInputValidator;
+			sourceTree = "<group>";
+		};
+		54167B231E5621A1000C4444 /* PlainObjectMapper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PlainObjectMapper;
+			sourceTree = "<group>";
+		};
+		54167B2E1E57120F000C4444 /* XMLParser */ = {
+			isa = PBXGroup;
+			children = (
+				54167B321E57125E000C4444 /* XMLParser.h */,
+				54167B2F1E57121A000C4444 /* XMLParserImplementation.h */,
+				54167B301E57121A000C4444 /* XMLParserImplementation.m */,
+			);
+			name = XMLParser;
+			sourceTree = "<group>";
+		};
+		54E0CF091E5776B00067384E /* DataDisplayManager */ = {
+			isa = PBXGroup;
+			children = (
+				54E0CF0A1E5776CA0067384E /* NewsListDataDisplayManager.h */,
+				54E0CF0B1E5776CA0067384E /* NewsListDataDisplayManager.m */,
+			);
+			name = DataDisplayManager;
+			sourceTree = "<group>";
+		};
+		54E0CF0D1E5778B10067384E /* CellObjectFactory */ = {
+			isa = PBXGroup;
+			children = (
+				54E0CF0F1E57790F0067384E /* NewsListCellObjectFactory.h */,
+				54E0CF101E57790F0067384E /* NewsListCellObjectFactory.m */,
+			);
+			name = CellObjectFactory;
+			sourceTree = "<group>";
+		};
+		54E0CF121E578E880067384E /* NewsListCell */ = {
+			isa = PBXGroup;
+			children = (
+				54E0CF131E578EBF0067384E /* NewsListCell.h */,
+				54E0CF141E578EBF0067384E /* NewsListCell.m */,
+			);
+			name = NewsListCell;
+			sourceTree = "<group>";
+		};
+		54E0CF161E579B740067384E /* NewsListConfigurableCell */ = {
+			isa = PBXGroup;
+			children = (
+				54E0CF171E579B9F0067384E /* NewsListConfigurableCell.h */,
+			);
+			name = NewsListConfigurableCell;
+			sourceTree = "<group>";
+		};
+		54E0CF181E579CA30067384E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				54E0CF191E579CB10067384E /* NewsList */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		54E0CF191E579CB10067384E /* NewsList */ = {
+			isa = PBXGroup;
+			children = (
+				54E0CF1A1E579CD60067384E /* NewsList.h */,
+				54E0CF1B1E579CD60067384E /* NewsList.m */,
+			);
+			name = NewsList;
+			sourceTree = "<group>";
+		};
+		54E0CF1D1E579D000067384E /* CellObject */ = {
+			isa = PBXGroup;
+			children = (
+				54E0CF1E1E579D110067384E /* CellObject.h */,
+			);
+			name = CellObject;
+			sourceTree = "<group>";
+		};
+		54E0CF1F1E57A6350067384E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				54E0CF2A1E5873770067384E /* NSString+DateFormat.h */,
+				54E0CF2B1E5873770067384E /* NSString+DateFormat.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		5CD41FC4DE132991A1B35C3F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D79C3AA3804049738AF38C22 /* Pods_RSSReader.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A2E996C99AE65C305F103E69 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C099F0ADBC13FE98D919CDDC /* Pods-RSSReader.debug.xcconfig */,
+				3AE1F56D65E2E15209A09D27 /* Pods-RSSReader.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +373,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 54167B131E560F56000C4444 /* Build configuration list for PBXNativeTarget "RSSReader" */;
 			buildPhases = (
+				4F25AD9DA44E3DACF9C89E09 /* [CP] Check Pods Manifest.lock */,
 				54167AE21E560F55000C4444 /* Sources */,
 				54167AE31E560F55000C4444 /* Frameworks */,
 				54167AE41E560F55000C4444 /* Resources */,
+				4425A13B5AE0BD009EB1B478 /* [CP] Embed Pods Frameworks */,
+				5AC67EC5A8728BF80E016BA2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,14 +500,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4425A13B5AE0BD009EB1B478 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RSSReader/Pods-RSSReader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F25AD9DA44E3DACF9C89E09 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5AC67EC5A8728BF80E016BA2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RSSReader/Pods-RSSReader-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		54167AE21E560F55000C4444 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54167AF11E560F55000C4444 /* ViewController.m in Sources */,
+				54E0CF281E584C450067384E /* NewsListRouter.m in Sources */,
+				54E0CF0C1E5776CA0067384E /* NewsListDataDisplayManager.m in Sources */,
 				54167AEE1E560F55000C4444 /* AppDelegate.m in Sources */,
+				54E0CF151E578EBF0067384E /* NewsListCell.m in Sources */,
 				54167AEB1E560F55000C4444 /* main.m in Sources */,
+				54167B3A1E575C19000C4444 /* NewsListPresenter.m in Sources */,
+				54E0CF2C1E5873770067384E /* NSString+DateFormat.m in Sources */,
+				54167B2C1E570E62000C4444 /* NewsListInteractor.m in Sources */,
+				54167B311E57121A000C4444 /* XMLParserImplementation.m in Sources */,
+				54E0CF111E57790F0067384E /* NewsListCellObjectFactory.m in Sources */,
+				54E0CF1C1E579CD60067384E /* NewsList.m in Sources */,
+				54167B361E5746E6000C4444 /* NewsListViewController.m in Sources */,
+				54E0CF251E583DB70067384E /* NewsListAssembly.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +710,7 @@
 		};
 		54167B141E560F56000C4444 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C099F0ADBC13FE98D919CDDC /* Pods-RSSReader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HCPP4HRP4L;
@@ -435,6 +723,7 @@
 		};
 		54167B151E560F56000C4444 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AE1F56D65E2E15209A09D27 /* Pods-RSSReader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HCPP4HRP4L;
@@ -514,6 +803,7 @@
 				54167B151E560F56000C4444 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		54167B161E560F56000C4444 /* Build configuration list for PBXNativeTarget "RSSReaderTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +812,7 @@
 				54167B181E560F56000C4444 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		54167B191E560F56000C4444 /* Build configuration list for PBXNativeTarget "RSSReaderUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +821,7 @@
 				54167B1B1E560F56000C4444 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

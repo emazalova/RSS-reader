@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface NewsListCell : UITableViewCell
-
+#import "NewsListConfigurableCell.h"
+@interface NewsListCell : UITableViewCell <NewsListConfigurableCell>
+@property (weak,nonatomic) IBOutlet UIImageView *imageNews;
+@property (weak,nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak,nonatomic) IBOutlet UILabel *dateOfPublicationLabel;
+@property (weak,nonatomic) IBOutlet UILabel *linkSourceLabel;
 @end

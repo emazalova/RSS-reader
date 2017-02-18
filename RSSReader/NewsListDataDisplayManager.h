@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+@interface NewsListDataDisplayManager : NSObject <UITableViewDataSource, UITableViewDelegate>
 
-@interface NewsListDataDisplayManager : NSObject
+- (id<UITableViewDataSource>)dataSourceForTableView:(UITableView *)tableView;
+- (id<UITableViewDelegate>)delegateForTableView:(UITableView *)tableView
+                               withBaseDelegate:(id <UITableViewDelegate>)baseTableViewDelegate;
+
+- (void)handleNewsData:(NSArray *)news;
 
 @end

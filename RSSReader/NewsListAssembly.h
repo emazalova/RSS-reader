@@ -6,8 +6,8 @@
 //  Copyright © 2017 Katrin Mazalova. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 
-@interface NewsListAssembly : NSObject
+#import <Typhoon/Typhoon.h>
+@interface NewsListAssembly : TyphoonAssembly
 
 @end

@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol NewsListConfigurableCell <NSObject>
+@protocol CellObject;
 
+@protocol NewsListConfigurableCell <NSObject>
+- (void)configureWithObject:(id<CellObject>)object;
 @end

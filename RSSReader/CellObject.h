@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @protocol CellObject <NSObject>
-
+- (NSString *)cellIdentifier;
 @end

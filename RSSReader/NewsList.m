@@ -7,7 +7,11 @@
 //
 
 #import "NewsList.h"
+#define newsListCellIdentifier @"NewsListCell"
 
 @implementation NewsList
 
+- (NSString *)cellIdentifier {
+    return newsListCellIdentifier;
+}
 @end

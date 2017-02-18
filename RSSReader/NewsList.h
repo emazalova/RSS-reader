@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CellObject.h"
+@interface NewsList : NSObject <CellObject>
 
-@interface NewsList : NSObject
+@property (strong,nonatomic) NSString *titleNews;
+@property (strong,nonatomic) NSString *linkSource;
+@property (strong,nonatomic) NSURL *imageUrl;
+@property (strong,nonatomic) NSString *dateOfPublication;
 
 @end
