@@ -8,7 +8,6 @@
 
 #import "XMLParserImplementation.h"
 #import "NewsList.h"
-#import "NSString+DateFormat.h"
 
 @interface XMLParserImplementation() <NSXMLParserDelegate> {
     BOOL isItem;
