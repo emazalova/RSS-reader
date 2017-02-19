@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  RSSReader
+
+  Created by Katrin on 19.02.17.
+  Copyright © 2017 Katrin Mazalova. All rights reserved.
+*/
+
+//Alerts
+"okButtonTitle" = "ОК";
+"alertInternetNotAvaible" = "Отсутсвует интернет соединение.";
+"alertUnknownError" = "Что-то пошло не так. Пожалуйста попробуйте позже.";//Любая неизвестная ошибка
+"alertWarning" = "Ошибка";
+
+//detail
+"sourceNewsText" = "Источник: ";
