@@ -3,6 +3,8 @@
 
 # Xcode
 build/
+Pods/
+Podfile.lock
 
 *.mode1
 *.mode1v3
