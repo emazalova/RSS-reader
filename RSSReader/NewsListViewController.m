@@ -7,7 +7,7 @@
 //
 
 #import "NewsListViewController.h"
-
+#import "ScreenManager.h"
 @interface NewsListViewController ()
 
 @property (strong,nonatomic) NSArray *newsList;
@@ -37,6 +37,13 @@
     [self.tableView reloadData];
 }
 
+- (void)showHUD {
+    [[ScreenManager sharedManager] showHUDAddedToView:self.view];
+}
+
+- (void)hideHUD {
+    [[ScreenManager sharedManager] hideHUD];
+}
 #pragma mark - NewsListViewInput
 
 - (void)viewDidLoad {

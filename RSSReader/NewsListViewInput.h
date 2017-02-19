@@ -13,5 +13,7 @@
 
 - (void)showNoContentScreen;
 - (void)showNewsData:(NSArray *)news;
+- (void)showHUD;
+- (void)hideHUD;
 
 @end

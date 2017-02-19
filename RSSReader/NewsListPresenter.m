@@ -13,14 +13,15 @@
 #pragma mark - NewsListViewOutput
 
 - (void)updateView {
+    [self.view showHUD];
     [self.interactor startObtainData];
 }
 
 #pragma mark - NewsListInteractorOutput
 
 - (void)didObtainData:(NSArray *)dataList {
-    
-    if (dataList.count > 0) {
+    [self.view hideHUD];
+       if (dataList.count > 0) {
         [self.view showNewsData:dataList];
     }else {
         [self.view showNoContentScreen];
