@@ -9,6 +9,7 @@
 #import "NewsListCell.h"
 #import "NewsList.h"
 #import "UIImageView+WebCache.h"
+#import "NSDate+Extension.h"
 @implementation NewsListCell
 
 #pragma mark - NewsListConfigurableCell
@@ -17,16 +18,11 @@
     if (![object isKindOfClass:[NewsList class]]) {
         return;
     }
-    
     NewsList *model = (NewsList *)object;
     [self.titleLabel setText:[NSString stringWithFormat:@"%@",model.titleNews]];
-    [self.dateOfPublicationLabel setText:[NSString stringWithFormat:@"%@",model.dateOfPublication]];
+    [self.dateOfPublicationLabel setText:[NSString stringWithFormat:@"%@",model.dateOfPublication.stringRepresentation]];
     [self.linkSourceLabel setText:[NSString stringWithFormat:@"%@",model.linkSource]];
     [self.imageNews  sd_setImageWithURL:model.imageUrl];
-    //[self setNeedsLayout];
-    //[self layoutIfNeeded];
-    //self.imageNews
-    //self.datOfPublicationLabel
 }
 - (void)awakeFromNib {
     [super awakeFromNib];

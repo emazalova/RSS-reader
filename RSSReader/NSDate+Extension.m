@@ -10,4 +10,9 @@
 
 @implementation NSDate (Extension)
 
+- (NSString *)stringRepresentation {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss"];
+    return [dateFormatter stringFromDate:self];
+}
 @end

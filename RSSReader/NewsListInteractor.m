@@ -35,17 +35,11 @@
 */
 #pragma mark - XMLParserDelegate
 
-- (void)parsingWasObtainWithSuccess {
-    
-    [self.output didObtainWithSuccess];
-}
-- (void)parsingWasObtainWithFailureMessage:(NSString *)message {
-    
-    [self.output didObtainWithFailureMessage:message];
+- (void)parsingWasObtainWithError:(NSError *)error {
+    [self.output didObtainWithError:error];
 }
 
-- (void)parsingWasFinished {
-    
+- (void)parsingWasObtainFinished {
     [self.output didObtainData:[self.parser getParsedDataList]];
 }
 #pragma mark - NewsListInteractorInput
@@ -54,6 +48,7 @@
     
     self.parser = [[XMLParserImplementation alloc] init];
     self.parser.delegate = self;
+
     [self.parser startParsingWithContentsOfURL:[NSURL URLWithString:baseURL]];
 }
 

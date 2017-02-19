@@ -13,6 +13,6 @@
 @property (strong,nonatomic) NSString *titleNews;
 @property (strong,nonatomic) NSString *linkSource;
 @property (strong,nonatomic) NSURL *imageUrl;
-@property (strong,nonatomic) NSString *dateOfPublication;
+@property (strong,nonatomic) NSDate *dateOfPublication;
 
 @end

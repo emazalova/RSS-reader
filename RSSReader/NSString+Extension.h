@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface NSString (Extension)
-- (NSString *)dateFormatRepresentation;
+- (NSDate *)dateFormatRepresentation;
 - (NSString *)localized; 
 @end

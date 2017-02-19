@@ -10,18 +10,22 @@
 
 @implementation NSString (Extension)
 
-- (NSString *)dateFormatRepresentation {
+- (NSDate *)dateFormatRepresentation {
+    
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss ZZZ"];
     NSDate *date = [dateFormatter dateFromString:self];
+    return date;
     /*
      if the format has been changed return self
      */
+    /*
     if (!date) {
         return self;
     }
     [dateFormatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss"];
     return [dateFormatter stringFromDate:date];
+    */
 }
 
 - (NSString *)localized {
