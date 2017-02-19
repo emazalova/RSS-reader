@@ -11,18 +11,13 @@
 #import "NewsListViewOutput.h"
 #import <ViperMcFlurry/ViperMcFlurry.h>
 #import "NewsListDataDisplayManager.h"
+
 @protocol RamblerViperModuleConfiguratorProtocol;
 
 @interface NewsListViewController : UIViewController <NewsListViewInput, RamblerViperModuleTransitionHandlerProtocol>
 
-@property (nonatomic, strong) id <NewsListViewOutput> output;//презентор
-
-
-#warning TODO: RamblerViperModuleConfiguratorProtocol???
+@property (nonatomic, strong) id <NewsListViewOutput> output;
 @property (nonatomic, weak)   id<RamblerViperModuleConfiguratorProtocol> moduleConfigurator;
-
-
-#warning TODO: outlets
 @property (nonatomic,strong) IBOutlet UITableView *tableView;
 
 @end

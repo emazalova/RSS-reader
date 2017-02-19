@@ -7,12 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "ErrorHandler.h"
 @protocol XMLParserDelegate
 
-- (void)parsingWasFinished;
-- (void)parsingWasObtainWithSuccess;
-- (void)parsingWasObtainWithFailureMessage:(NSString *)message;
+- (void)parsingWasObtainFinished;
+- (void)parsingWasObtainWithError:(NSError *)error;
 
 @end
 

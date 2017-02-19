@@ -9,7 +9,6 @@
 //Alerts
 "okButtonTitle" = "ОК";
 "alertInternetNotAvaible" = "Отсутсвует интернет соединение.";
-"alertUnknownError" = "Что-то пошло не так. Пожалуйста попробуйте позже.";//Любая неизвестная ошибка
 "alertWarning" = "Ошибка";
 
 //detail

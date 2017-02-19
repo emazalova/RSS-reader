@@ -9,6 +9,7 @@
 #import "XMLParserImplementation.h"
 #import "NewsList.h"
 
+
 @interface XMLParserImplementation() <NSXMLParserDelegate> {
     BOOL isItem;
 }
@@ -73,7 +74,6 @@
 #pragma mark - XMLParser
 
 - (void)startParsingWithContentsOfURL:(NSURL *)rssUrl {
-    
     NSXMLParser *parser = [[NSXMLParser alloc] initWithContentsOfURL:rssUrl];
     parser.delegate = self;
     [parser parse];
@@ -133,17 +133,17 @@
 }
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser {
-    [self.delegate parsingWasFinished];
+    [self.delegate parsingWasObtainFinished];
 }
 
 - (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError {
-    #warning TODO: error handler
     NSLog(@"ERROR is %@",parseError.description);
+    [self.delegate parsingWasObtainWithError:parseError];
 }
 
 - (void)parser:(NSXMLParser *)parser validationErrorOccurred:(NSError *)validationError {
-    #warning TODO: error handler
     NSLog(@"ERROR is %@",validationError.description);
+    [self.delegate parsingWasObtainWithError:validationError];
 }
 
 @end

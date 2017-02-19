@@ -7,11 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "ErrorHandler.h"
 @protocol NewsListInteractorOutput <NSObject>
 
 - (void)didObtainData:(NSArray *)dataList;
-- (void)didObtainWithSuccess;
-- (void)didObtainWithFailureMessage:(NSString *)message;
+- (void)didObtainWithError:(NSError *)error;
 
 @end

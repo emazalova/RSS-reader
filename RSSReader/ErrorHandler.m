@@ -12,11 +12,8 @@
 
 @implementation ErrorHandler
 
-+ (void)handleError:(NSError *)error {
-    [AlertHelper showAlertWithTitle:@"alertWarning" andMessage:[error localizedDescription]];
-}
-
-+ (void)handleErrorWithType:(ErrorType)errorType {
+/*
++ (void)handleErrorWithType:(ErrorType)errorType message:(NSString *)message{
     switch (errorType) {
         case InternetNotReachableErrorType:
             [AlertHelper showAlertWithTitle:@"" andMessage:@"alertInternetNotAvaible".localized];
@@ -25,8 +22,31 @@
         case TimeoutErrorType:
             [AlertHelper showAlertWithTitle:@"" andMessage:@"alertInternetNotAvaible".localized];
             break;
-        
+            
+        case ValidationErrorType:
+            [AlertHelper showAlertWithTitle:@"alertWarning".localized andMessage:message];
+            break;
+            
+        case ParseErrorType:
+            [AlertHelper showAlertWithTitle:@"alertWarning".localized andMessage:message];
+            break;
+            
+        case OtherErrorType:
+            [AlertHelper showAlertWithTitle:@"alertWarning".localized andMessage:message];
+            break;
+            
         default:
+            break;
+    }
+}
+*/
++ (void)handleError:(NSError *)error {
+    switch (error.code) {
+        case NSURLErrorNotConnectedToInternet:
+            [AlertHelper showAlertWithTitle:@"" andMessage:@"alertInternetNotAvaible".localized];
+            break;
+        default:
+            [AlertHelper showAlertWithTitle:@"alertWarning".localized andMessage:error.description];
             break;
     }
 }
