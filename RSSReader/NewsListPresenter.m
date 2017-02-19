@@ -7,14 +7,33 @@
 //
 
 #import "NewsListPresenter.h"
-
+#import "ErrorHandler.h"
+#import <Reachability/Reachability.h>
 @implementation NewsListPresenter
 
 #pragma mark - NewsListViewOutput
 
 - (void)updateView {
-    [self.view showHUD];
-    [self.interactor startObtainData];
+    
+   // NetworkStatus remoteHostStatus = [[Reachability reachabilityForInternetConnection] currentReachabilityStatus];
+    
+    BOOL isReachable = [Reachability reachabilityForInternetConnection].isReachable;
+    if (!isReachable) {
+        NSError *error = [NSError errorWithDomain:NSURLErrorDomain code:NSURLErrorNotConnectedToInternet userInfo:nil];
+        [ErrorHandler handleError:error];
+        return;
+    }else {
+        [self.view showHUD];
+        [self.interactor startObtainData];
+    }
+    /*
+    if (remoteHostStatus == NotReachable) {
+        NSError *error = [NSError errorWithDomain:NSURLErrorDomain code:NSURLErrorNotConnectedToInternet userInfo:nil];
+        [ErrorHandler handleError:error];
+        return;
+    }
+    */
+    
 }
 
 #pragma mark - NewsListInteractorOutput
@@ -27,12 +46,9 @@
         [self.view showNoContentScreen];
     }
 }
-- (void)didObtainWithSuccess {
-    //успех
-}
-- (void)didObtainWithFailureMessage:(NSString *)message {
-    //ошибка, надо ее вывести
-    //как вариант передать во вьюху сообщение
+
+- (void)didObtainWithError:(NSError *)error {
+    [ErrorHandler handleError:error];
 }
 
 

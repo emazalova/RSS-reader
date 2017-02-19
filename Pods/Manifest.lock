@@ -15,6 +15,7 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - MBProgressHUD (1.0.0)
+  - Reachability (3.2)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
@@ -29,8 +30,9 @@ PODS:
   - ViperMcFlurry (1.5.2)
 
 DEPENDENCIES:
-  - AFNetworking
-  - MBProgressHUD
+  - AFNetworking (~> 3.1.0)
+  - MBProgressHUD (~> 1.0.0)
+  - Reachability
   - SDWebImage (~> 4.0.0)
   - Typhoon (~> 4.0.2)
   - ViperMcFlurry (~> 1.5.2)
@@ -38,10 +40,11 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   Typhoon: 05db9d33d798b90c202bf3f754275c03efe93297
   ViperMcFlurry: 701bc3ad8d188b1f1e157ec0ddf4e77184de88b5
 
-PODFILE CHECKSUM: 9cb11b3fbed5d5b46fad8251e921c598a4a457ce
+PODFILE CHECKSUM: 07850040b53292459001702864c95323ed6bb4ce
 
 COCOAPODS: 1.2.0

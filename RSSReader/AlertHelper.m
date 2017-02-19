@@ -8,7 +8,7 @@
 
 #import "AlertHelper.h"
 #import <UIKit/UIKit.h>
-#import "UIApplication+Extension.h"
+
 @implementation AlertHelper
 
 + (void)showAlertWithTitle:(NSString *)title andMessage:(NSString *)message {
@@ -22,6 +22,7 @@
                                                         handler:nil];
     [alertController addAction:alertAction];
     
-    [[UIApplication getTopMostViewController] presentViewController:alertController animated:YES completion:nil];
+    UIViewController *rootController = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
+    [rootController presentViewController:alertController animated:YES completion:nil];
 }
 @end

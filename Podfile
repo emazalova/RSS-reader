@@ -5,7 +5,8 @@ target ‘RSSReader’ do
 pod 'ViperMcFlurry’, '~> 1.5.2’
 pod 'Typhoon', '~> 4.0.2'
 pod 'SDWebImage', '~> 4.0.0’
-pod 'AFNetworking', '~> 3.1.0’
+#pod 'AFNetworking', '~> 3.1.0’
 pod 'MBProgressHUD', '~> 1.0.0’
+pod 'Reachability'
 
 end
