@@ -10,6 +10,10 @@
 
 @protocol NewsListInteractorInput <NSObject>
 
-- (void)startObtainData;
+/**
+ Метод создает парсер и стартует процесс для получения данных
+ для списка новостей 
+ */
+- (void)createParserAndStartObtainDataWithURL:(NSURL *)url;
 
 @end

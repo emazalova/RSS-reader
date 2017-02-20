@@ -9,11 +9,23 @@
 #import <Foundation/Foundation.h>
 #import <ViperMcFlurry/ViperMcFlurry.h>
 
+
 @protocol NewsListViewInput <RamblerViperModuleInput>
 
-- (void)showNoContentScreen;
+/**
+ Метод для отображения списка новостей
+ */
 - (void)showNewsData:(NSArray *)news;
+
+/**
+ Метод для отображения активити индикатора
+ */
 - (void)showHUD;
+
+/**
+ Метод для скрытия активити индикатора
+ */
 - (void)hideHUD;
+
 
 @end

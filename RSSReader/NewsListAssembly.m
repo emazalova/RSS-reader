@@ -12,7 +12,6 @@
 #import "NewsListViewController.h"
 #import "NewsListInteractor.h"
 #import "NewsListPresenter.h"
-#import "NewsListRouter.h"
 
 @interface NewsListAssembly()
 
@@ -47,20 +46,9 @@
                                                     with:[self viewModuleNewsList]];
                               [definition injectProperty:@selector(interactor)
                                                     with:[self interactorModuleNewsList]];
-                              //[definition injectProperty:@selector(router)
-                                                    //with:[self routerModuleNewsList]];
-                          }];
-}
-
-- (NewsListRouter *)routerModuleNewsList {
-    return [TyphoonDefinition withClass:[NewsListRouter class]
-                          configuration:^(TyphoonDefinition *definition) {
                               
-                              [definition injectProperty:@selector(transitionHandler)
-                                                    with:[self viewModuleNewsList]];
                           }];
 }
-
 
 
 @end

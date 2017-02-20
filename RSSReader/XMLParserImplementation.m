@@ -7,7 +7,7 @@
 //
 
 #import "XMLParserImplementation.h"
-#import "NewsList.h"
+#import "News.h"
 
 
 @interface XMLParserImplementation() <NSXMLParserDelegate> {
@@ -23,18 +23,10 @@
 
 @implementation XMLParserImplementation
 
-#pragma mark - Init
+/**
+ Методы инициализации
+ */
 
-+ (XMLParserImplementation*)shared {
-    
-    static XMLParserImplementation *manager = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        manager = [[XMLParserImplementation alloc] init];
-    });
-    
-    return manager;
-}
 - (instancetype)init {
     
     isItem = NO;
@@ -43,10 +35,21 @@
     
     return self;
 }
-#pragma mark - handle data to model NewsList
 
-/*
- convert the intermediate data in NewsList model
+/**
+ Сортировка моделей NewsList по дате публикации
+ */
+- (NSArray *)sortArrayByPublicationDate:(NSMutableArray *)newsList {
+    NSArray *sortedArray = [newsList sortedArrayUsingComparator:^NSComparisonResult(id firstElement, id nextElement) {
+        NSDate *firstDate = [(News*)firstElement dateOfPublication];
+        NSDate *secondDate = [(News*)nextElement dateOfPublication];
+        return [secondDate compare:firstDate];
+    }];
+    return sortedArray;
+}
+
+/**
+ Метод, преобразующий промежуточные данные в модели NewsList
  */
 - (NSArray *)treatedDataListFrom:(NSArray *)parsedDataList {
     
@@ -56,7 +59,7 @@
     NSMutableArray *treatedDataList = [NSMutableArray array];
     for (int i = 0; i<parsedDataList.count; i++) {
         
-        NewsList *news = [[NewsList alloc] init];
+        News *news = [[News alloc] init];
         NSDictionary *favouritesData = [parsedDataList objectAtIndex:i];
         
         news.titleNews = [favouritesData objectForKey:@"title"];
@@ -68,19 +71,18 @@
         }
         [treatedDataList addObject:news];
     }
-    return treatedDataList;
+    return [self sortArrayByPublicationDate:treatedDataList];
 }
 
 #pragma mark - XMLParser
 
-- (void)startParsingWithContentsOfURL:(NSURL *)rssUrl {
+- (void)createAndstartParsingWithContentsOfURL:(NSURL *)rssUrl {
     NSXMLParser *parser = [[NSXMLParser alloc] initWithContentsOfURL:rssUrl];
     parser.delegate = self;
     [parser parse];
 }
-/*
- get array with NewsList models
- */
+
+
 - (NSArray *)getParsedDataList {
     return [self treatedDataListFrom:self.parsedDataList];
 }

@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ Протокол, использующийся для получения идентификатора ячейки 
+ в зав-ти от ее класса
+ */
+
 @protocol CellObject <NSObject>
-- (NSString *)cellIdentifier;
+- (Class)cellClass;
 @end

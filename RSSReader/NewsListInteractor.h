@@ -9,11 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "NewsListInteractorInput.h"
 #import "NewsListInteractorOutput.h"
-#import "XMLParserImplementation.h"
+
+@class XMLParserImplementation;
+
+/**
+ Модуль отвечает за обработку списка новостей.
+ 
+ */
 @interface NewsListInteractor : NSObject <NewsListInteractorInput>
 
 @property (nonatomic, weak) id <NewsListInteractorOutput> output;
-//@property (nonatomic, strong) id <XMLParser> parser;
 @property (nonatomic, strong) XMLParserImplementation* parser;
 
 @end

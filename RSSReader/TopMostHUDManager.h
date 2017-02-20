@@ -1,5 +1,5 @@
 //
-//  ScreenManager.h
+//  TopMostHUDManager.h
 //  RSSReader
 //
 //  Created by Katrin on 19.02.17.
@@ -9,7 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "MBProgressHUD.h"
-@interface ScreenManager : NSObject
+
+/**
+ Объект для отображения/скрытия активити индикатора 
+ */
+@interface TopMostHUDManager : NSObject
 + (instancetype)sharedManager;
 - (MBProgressHUD *)showHUDAddedToView:(UIView *)view;
 - (void)hideHUD;

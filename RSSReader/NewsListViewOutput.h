@@ -10,6 +10,11 @@
 
 @protocol NewsListViewOutput <NSObject>
 
-- (void)updateView;
+/**
+ Метод использующийся для настройки View
+ в соответствии с наличием интернет соединения 
+ и передачей управления интерактору в случае успешной проверки
+ */
+- (void)setupViewAndStartGettingData;
 
 @end

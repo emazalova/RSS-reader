@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "NewsListConfigurableCell.h"
+
+/**
+ Ячейка, используемая для краткого отображения новости в списке
+ */
 @interface NewsListCell : UITableViewCell <NewsListConfigurableCell>
 @property (weak,nonatomic) IBOutlet UIImageView *imageNews;
 @property (weak,nonatomic) IBOutlet UILabel *titleLabel;

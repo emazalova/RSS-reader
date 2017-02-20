@@ -10,6 +10,9 @@
 
 @protocol CellObject;
 
+/**
+ Протокол, описывающий метод для конфигурации ячейки в соотстветствии с моделью
+ */
 @protocol NewsListConfigurableCell <NSObject>
 - (void)configureWithObject:(id<CellObject>)object;
 @end

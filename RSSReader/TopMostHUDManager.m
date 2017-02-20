@@ -1,24 +1,24 @@
 //
-//  ScreenManager.m
+//  TopMostHUDManager.m
 //  RSSReader
 //
 //  Created by Katrin on 19.02.17.
 //  Copyright © 2017 Katrin Mazalova. All rights reserved.
 //
 
-#import "ScreenManager.h"
+#import "TopMostHUDManager.h"
 
-@interface ScreenManager()
+@interface TopMostHUDManager()
 
 @property (nonatomic, weak) MBProgressHUD *hud;
 
 @end
 
-@implementation ScreenManager
+@implementation TopMostHUDManager
 
 + (instancetype)sharedManager {
     static dispatch_once_t once;
-    static ScreenManager *sharedManager = nil;
+    static TopMostHUDManager *sharedManager = nil;
     dispatch_once(&once, ^ {
         sharedManager = [[self alloc] init];
     });
@@ -44,6 +44,7 @@
     }
     return self.hud;
 }
+
 - (void)hideHUD {
     if (self.hud) {
         [self.hud hideAnimated:YES];

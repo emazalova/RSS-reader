@@ -10,6 +10,3 @@
 "okButtonTitle" = "ОК";
 "alertInternetNotAvaible" = "Отсутсвует интернет соединение.";
 "alertWarning" = "Ошибка";
-
-//detail
-"sourceNewsText" = "Источник: ";

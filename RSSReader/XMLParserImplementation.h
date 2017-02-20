@@ -10,5 +10,7 @@
 #import "XMLParser.h"
 
 @interface XMLParserImplementation : NSObject <XMLParser>
+
 @property (weak,nonatomic) id <XMLParserDelegate> delegate;
+
 @end

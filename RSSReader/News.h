@@ -1,5 +1,5 @@
 //
-//  NewsList.h
+//  News.h
 //  RSSReader
 //
 //  Created by Katrin on 18.02.17.
@@ -8,7 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "CellObject.h"
-@interface NewsList : NSObject <CellObject>
+
+/**
+ Модель, представляющая краткую форму новости в списке новостей
+ */
+@interface News : NSObject <CellObject>
 
 @property (strong,nonatomic) NSString *titleNews;
 @property (strong,nonatomic) NSString *linkSource;

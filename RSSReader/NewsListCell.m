@@ -7,7 +7,7 @@
 //
 
 #import "NewsListCell.h"
-#import "NewsList.h"
+#import "News.h"
 #import "UIImageView+WebCache.h"
 #import "NSDate+Extension.h"
 @implementation NewsListCell
@@ -15,10 +15,10 @@
 #pragma mark - NewsListConfigurableCell
 
 - (void)configureWithObject:(id<CellObject>)object {
-    if (![object isKindOfClass:[NewsList class]]) {
+    if (![object isKindOfClass:[News class]]) {
         return;
     }
-    NewsList *model = (NewsList *)object;
+    News *model = (News *)object;
     [self.titleLabel setText:[NSString stringWithFormat:@"%@",model.titleNews]];
     [self.dateOfPublicationLabel setText:[NSString stringWithFormat:@"%@",model.dateOfPublication.stringRepresentation]];
     [self.linkSourceLabel setText:[NSString stringWithFormat:@"%@",model.linkSource]];

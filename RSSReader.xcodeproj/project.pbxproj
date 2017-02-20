@@ -18,17 +18,15 @@
 		54167B311E57121A000C4444 /* XMLParserImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = 54167B301E57121A000C4444 /* XMLParserImplementation.m */; };
 		54167B361E5746E6000C4444 /* NewsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54167B351E5746E6000C4444 /* NewsListViewController.m */; };
 		54167B3A1E575C19000C4444 /* NewsListPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 54167B391E575C19000C4444 /* NewsListPresenter.m */; };
-		54973AA11E598A6C008012F2 /* ScreenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 54973AA01E598A6C008012F2 /* ScreenManager.m */; };
+		54973AA11E598A6C008012F2 /* TopMostHUDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 54973AA01E598A6C008012F2 /* TopMostHUDManager.m */; };
 		54973AA41E599CDB008012F2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54973AA61E599CDB008012F2 /* Localizable.strings */; };
 		54973AAE1E59A811008012F2 /* ErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 54973AAD1E59A811008012F2 /* ErrorHandler.m */; };
 		54973AB21E59AC16008012F2 /* AlertHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 54973AB11E59AC16008012F2 /* AlertHelper.m */; };
 		54973AC21E5A35FA008012F2 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 54973AC11E5A35FA008012F2 /* NSDate+Extension.m */; };
 		54E0CF0C1E5776CA0067384E /* NewsListDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E0CF0B1E5776CA0067384E /* NewsListDataDisplayManager.m */; };
-		54E0CF111E57790F0067384E /* NewsListCellObjectFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E0CF101E57790F0067384E /* NewsListCellObjectFactory.m */; };
 		54E0CF151E578EBF0067384E /* NewsListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E0CF141E578EBF0067384E /* NewsListCell.m */; };
-		54E0CF1C1E579CD60067384E /* NewsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E0CF1B1E579CD60067384E /* NewsList.m */; };
+		54E0CF1C1E579CD60067384E /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E0CF1B1E579CD60067384E /* News.m */; };
 		54E0CF251E583DB70067384E /* NewsListAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E0CF241E583DB70067384E /* NewsListAssembly.m */; };
-		54E0CF281E584C450067384E /* NewsListRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E0CF271E584C450067384E /* NewsListRouter.m */; };
 		54E0CF2C1E5873770067384E /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E0CF2B1E5873770067384E /* NSString+Extension.m */; };
 		9DBFB9F4872DAB1B69DD6037 /* Pods_RSSReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D79C3AA3804049738AF38C22 /* Pods_RSSReader.framework */; };
 /* End PBXBuildFile section */
@@ -79,8 +77,8 @@
 		54167B371E574847000C4444 /* NewsListViewOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListViewOutput.h; sourceTree = "<group>"; };
 		54167B381E575C19000C4444 /* NewsListPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListPresenter.h; sourceTree = "<group>"; };
 		54167B391E575C19000C4444 /* NewsListPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListPresenter.m; sourceTree = "<group>"; };
-		54973A9F1E598A6C008012F2 /* ScreenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenManager.h; sourceTree = "<group>"; };
-		54973AA01E598A6C008012F2 /* ScreenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenManager.m; sourceTree = "<group>"; };
+		54973A9F1E598A6C008012F2 /* TopMostHUDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopMostHUDManager.h; sourceTree = "<group>"; };
+		54973AA01E598A6C008012F2 /* TopMostHUDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopMostHUDManager.m; sourceTree = "<group>"; };
 		54973AA51E599CDB008012F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		54973AA71E599D89008012F2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		54973AA81E599D89008012F2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -92,21 +90,17 @@
 		54973AB11E59AC16008012F2 /* AlertHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertHelper.m; sourceTree = "<group>"; };
 		54973AC01E5A35FA008012F2 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
 		54973AC11E5A35FA008012F2 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		54973ACA1E5B6633008012F2 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		54E0CF0A1E5776CA0067384E /* NewsListDataDisplayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListDataDisplayManager.h; sourceTree = "<group>"; };
 		54E0CF0B1E5776CA0067384E /* NewsListDataDisplayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListDataDisplayManager.m; sourceTree = "<group>"; };
-		54E0CF0F1E57790F0067384E /* NewsListCellObjectFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListCellObjectFactory.h; sourceTree = "<group>"; };
-		54E0CF101E57790F0067384E /* NewsListCellObjectFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListCellObjectFactory.m; sourceTree = "<group>"; };
 		54E0CF131E578EBF0067384E /* NewsListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListCell.h; sourceTree = "<group>"; };
 		54E0CF141E578EBF0067384E /* NewsListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListCell.m; sourceTree = "<group>"; };
 		54E0CF171E579B9F0067384E /* NewsListConfigurableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListConfigurableCell.h; sourceTree = "<group>"; };
-		54E0CF1A1E579CD60067384E /* NewsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsList.h; sourceTree = "<group>"; };
-		54E0CF1B1E579CD60067384E /* NewsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsList.m; sourceTree = "<group>"; };
+		54E0CF1A1E579CD60067384E /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
+		54E0CF1B1E579CD60067384E /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
 		54E0CF1E1E579D110067384E /* CellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellObject.h; sourceTree = "<group>"; };
 		54E0CF231E583DB70067384E /* NewsListAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListAssembly.h; sourceTree = "<group>"; };
 		54E0CF241E583DB70067384E /* NewsListAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListAssembly.m; sourceTree = "<group>"; };
-		54E0CF261E584C450067384E /* NewsListRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListRouter.h; sourceTree = "<group>"; };
-		54E0CF271E584C450067384E /* NewsListRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListRouter.m; sourceTree = "<group>"; };
-		54E0CF291E584CC30067384E /* NewsListRouterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListRouterInput.h; sourceTree = "<group>"; };
 		54E0CF2A1E5873770067384E /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		54E0CF2B1E5873770067384E /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		C099F0ADBC13FE98D919CDDC /* Pods-RSSReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSSReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSSReader/Pods-RSSReader.debug.xcconfig"; sourceTree = "<group>"; };
@@ -164,16 +158,8 @@
 		54167AE81E560F55000C4444 /* RSSReader */ = {
 			isa = PBXGroup;
 			children = (
-				54E0CF1F1E57A6350067384E /* Extensions */,
-				54973AAF1E59AC0B008012F2 /* AlertHelper */,
-				54973AAB1E59A7FE008012F2 /* ErrorHandler */,
-				54167B1C1E56208D000C4444 /* NewsList */,
-				54167AEC1E560F55000C4444 /* AppDelegate.h */,
-				54167AED1E560F55000C4444 /* AppDelegate.m */,
-				54167AF21E560F55000C4444 /* Main.storyboard */,
-				54167AF51E560F55000C4444 /* Assets.xcassets */,
-				54167AF71E560F55000C4444 /* LaunchScreen.storyboard */,
-				54167AFA1E560F55000C4444 /* Info.plist */,
+				54973AC31E5B3A2A008012F2 /* Classes */,
+				54973AC61E5B3B24008012F2 /* Resources */,
 				54167AE91E560F55000C4444 /* Supporting Files */,
 			);
 			path = RSSReader;
@@ -237,9 +223,6 @@
 				54167B2A1E570E62000C4444 /* NewsListInteractor.h */,
 				54167B2B1E570E62000C4444 /* NewsListInteractor.m */,
 				54167B291E570DB0000C4444 /* NewsListInteractorInput.h */,
-				54167B2D1E570F34000C4444 /* NewsListInteractorOutput.h */,
-				54167B231E5621A1000C4444 /* PlainObjectMapper */,
-				54167B221E562197000C4444 /* UserInputValidator */,
 			);
 			name = Interactor;
 			sourceTree = "<group>";
@@ -247,6 +230,7 @@
 		54167B1F1E5620BB000C4444 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				54167B2D1E570F34000C4444 /* NewsListInteractorOutput.h */,
 				54167B371E574847000C4444 /* NewsListViewOutput.h */,
 				54167B381E575C19000C4444 /* NewsListPresenter.h */,
 				54167B391E575C19000C4444 /* NewsListPresenter.m */,
@@ -257,9 +241,6 @@
 		54167B201E5620C7000C4444 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				54E0CF261E584C450067384E /* NewsListRouter.h */,
-				54E0CF271E584C450067384E /* NewsListRouter.m */,
-				54E0CF291E584CC30067384E /* NewsListRouterInput.h */,
 			);
 			name = Router;
 			sourceTree = "<group>";
@@ -267,30 +248,14 @@
 		54167B211E5620CE000C4444 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				54973A9E1E598A0F008012F2 /* ScreenManager */,
 				54E0CF161E579B740067384E /* NewsListConfigurableCell */,
 				54E0CF121E578E880067384E /* NewsListCell */,
-				54E0CF0D1E5778B10067384E /* CellObjectFactory */,
 				54E0CF091E5776B00067384E /* DataDisplayManager */,
 				54167B331E57462B000C4444 /* NewsListViewInput.h */,
 				54167B341E5746E6000C4444 /* NewsListViewController.h */,
 				54167B351E5746E6000C4444 /* NewsListViewController.m */,
 			);
 			name = View;
-			sourceTree = "<group>";
-		};
-		54167B221E562197000C4444 /* UserInputValidator */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = UserInputValidator;
-			sourceTree = "<group>";
-		};
-		54167B231E5621A1000C4444 /* PlainObjectMapper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = PlainObjectMapper;
 			sourceTree = "<group>";
 		};
 		54167B2E1E57120F000C4444 /* XMLParser */ = {
@@ -303,13 +268,13 @@
 			name = XMLParser;
 			sourceTree = "<group>";
 		};
-		54973A9E1E598A0F008012F2 /* ScreenManager */ = {
+		54973A9E1E598A0F008012F2 /* TopMostHUDManager */ = {
 			isa = PBXGroup;
 			children = (
-				54973A9F1E598A6C008012F2 /* ScreenManager.h */,
-				54973AA01E598A6C008012F2 /* ScreenManager.m */,
+				54973A9F1E598A6C008012F2 /* TopMostHUDManager.h */,
+				54973AA01E598A6C008012F2 /* TopMostHUDManager.m */,
 			);
-			name = ScreenManager;
+			name = TopMostHUDManager;
 			sourceTree = "<group>";
 		};
 		54973AAB1E59A7FE008012F2 /* ErrorHandler */ = {
@@ -348,6 +313,72 @@
 			name = NSDate;
 			sourceTree = "<group>";
 		};
+		54973AC31E5B3A2A008012F2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				54973AC81E5B3C01008012F2 /* Storyboard */,
+				54973AC71E5B3B8A008012F2 /* Application */,
+				54973AC51E5B3A6A008012F2 /* Modules */,
+				54973AC41E5B3A30008012F2 /* Common */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		54973AC41E5B3A30008012F2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				54973AC91E5B661C008012F2 /* Constants */,
+				54973A9E1E598A0F008012F2 /* TopMostHUDManager */,
+				54973AAB1E59A7FE008012F2 /* ErrorHandler */,
+				54973AAF1E59AC0B008012F2 /* AlertHelper */,
+				54E0CF1F1E57A6350067384E /* Extensions */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		54973AC51E5B3A6A008012F2 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				54167B1C1E56208D000C4444 /* NewsList */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		54973AC61E5B3B24008012F2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				54167AFA1E560F55000C4444 /* Info.plist */,
+				54167AF51E560F55000C4444 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		54973AC71E5B3B8A008012F2 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				54167AEC1E560F55000C4444 /* AppDelegate.h */,
+				54167AED1E560F55000C4444 /* AppDelegate.m */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		54973AC81E5B3C01008012F2 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				54167AF21E560F55000C4444 /* Main.storyboard */,
+				54167AF71E560F55000C4444 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		54973AC91E5B661C008012F2 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				54973ACA1E5B6633008012F2 /* Constant.h */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 		54E0CF091E5776B00067384E /* DataDisplayManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,15 +386,6 @@
 				54E0CF0B1E5776CA0067384E /* NewsListDataDisplayManager.m */,
 			);
 			name = DataDisplayManager;
-			sourceTree = "<group>";
-		};
-		54E0CF0D1E5778B10067384E /* CellObjectFactory */ = {
-			isa = PBXGroup;
-			children = (
-				54E0CF0F1E57790F0067384E /* NewsListCellObjectFactory.h */,
-				54E0CF101E57790F0067384E /* NewsListCellObjectFactory.m */,
-			);
-			name = CellObjectFactory;
 			sourceTree = "<group>";
 		};
 		54E0CF121E578E880067384E /* NewsListCell */ = {
@@ -386,18 +408,18 @@
 		54E0CF181E579CA30067384E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				54E0CF191E579CB10067384E /* NewsList */,
+				54E0CF191E579CB10067384E /* News */,
 			);
 			name = Models;
 			sourceTree = "<group>";
 		};
-		54E0CF191E579CB10067384E /* NewsList */ = {
+		54E0CF191E579CB10067384E /* News */ = {
 			isa = PBXGroup;
 			children = (
-				54E0CF1A1E579CD60067384E /* NewsList.h */,
-				54E0CF1B1E579CD60067384E /* NewsList.m */,
+				54E0CF1A1E579CD60067384E /* News.h */,
+				54E0CF1B1E579CD60067384E /* News.m */,
 			);
-			name = NewsList;
+			name = News;
 			sourceTree = "<group>";
 		};
 		54E0CF1D1E579D000067384E /* CellObject */ = {
@@ -624,7 +646,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				54973AB21E59AC16008012F2 /* AlertHelper.m in Sources */,
-				54E0CF281E584C450067384E /* NewsListRouter.m in Sources */,
 				54E0CF0C1E5776CA0067384E /* NewsListDataDisplayManager.m in Sources */,
 				54167AEE1E560F55000C4444 /* AppDelegate.m in Sources */,
 				54E0CF151E578EBF0067384E /* NewsListCell.m in Sources */,
@@ -635,9 +656,8 @@
 				54167B311E57121A000C4444 /* XMLParserImplementation.m in Sources */,
 				54973AC21E5A35FA008012F2 /* NSDate+Extension.m in Sources */,
 				54973AAE1E59A811008012F2 /* ErrorHandler.m in Sources */,
-				54973AA11E598A6C008012F2 /* ScreenManager.m in Sources */,
-				54E0CF111E57790F0067384E /* NewsListCellObjectFactory.m in Sources */,
-				54E0CF1C1E579CD60067384E /* NewsList.m in Sources */,
+				54973AA11E598A6C008012F2 /* TopMostHUDManager.m in Sources */,
+				54E0CF1C1E579CD60067384E /* News.m in Sources */,
 				54167B361E5746E6000C4444 /* NewsListViewController.m in Sources */,
 				54E0CF251E583DB70067384E /* NewsListAssembly.m in Sources */,
 			);

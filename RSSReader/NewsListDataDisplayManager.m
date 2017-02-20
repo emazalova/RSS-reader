@@ -13,24 +13,26 @@
 @protocol NewsListConfigurableCell;
 @protocol CellObject;
 
-@interface NewsListDataDisplayManager()
+@interface NewsListDataDisplayManager() <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong,nonatomic) NSArray *news;
+
 @end
+
 @implementation NewsListDataDisplayManager 
 
 - (id<UITableViewDataSource>)dataSourceForTableView:(UITableView *)tableView {
-    return tableView.dataSource;
+    return self;
 }
-- (id<UITableViewDelegate>)delegateForTableView:(UITableView *)tableView
-                               withBaseDelegate:(id <UITableViewDelegate>)baseTableViewDelegate {
-    return tableView.delegate;
-    
+
+- (id<UITableViewDelegate>)delegateForTableView:(UITableView *)tableView {
+    return self;
 }
 
 - (void)handleNewsData:(NSArray *)news {
     self.news = news;
 }
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -39,27 +41,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    //static NSString *identifier = newsListCellIdentifier;
-    
     id<CellObject> model = [self.news objectAtIndex:indexPath.row];
-    NSString *ident = [model cellIdentifier];
+    NSString *ident = NSStringFromClass([model cellClass]);
     
     UITableViewCell<NewsListConfigurableCell> *cell = [tableView dequeueReusableCellWithIdentifier:ident];
-    //[tableView dequeueReusableCellWithIdentifier:ident forIndexPath:indexPath];
     
     if (!cell) {
         cell = [[UITableViewCell<NewsListConfigurableCell> alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ident];
     }
     [cell configureWithObject:model];
     return cell;
-    /*
-    let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.hotelCellIdentifier, for: indexPath)
     
-    if let hotel = model.hotels?[indexPath.row], let cell = cell as? HotelCell  {
-        cell.hotel = hotel
-    }
-    return cell
-    */
 }
 
 @end

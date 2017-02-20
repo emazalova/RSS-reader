@@ -9,13 +9,13 @@
 #import "NewsListPresenter.h"
 #import "ErrorHandler.h"
 #import <Reachability/Reachability.h>
+#import "Constant.h"
+
 @implementation NewsListPresenter
 
 #pragma mark - NewsListViewOutput
 
-- (void)updateView {
-    
-   // NetworkStatus remoteHostStatus = [[Reachability reachabilityForInternetConnection] currentReachabilityStatus];
+- (void)setupViewAndStartGettingData {
     
     BOOL isReachable = [Reachability reachabilityForInternetConnection].isReachable;
     if (!isReachable) {
@@ -23,18 +23,12 @@
         [ErrorHandler handleError:error];
         return;
     }else {
+       
         [self.view showHUD];
-        [self.interactor startObtainData];
+        [self.interactor createParserAndStartObtainDataWithURL:[NSURL URLWithString:baseURL]];
     }
-    /*
-    if (remoteHostStatus == NotReachable) {
-        NSError *error = [NSError errorWithDomain:NSURLErrorDomain code:NSURLErrorNotConnectedToInternet userInfo:nil];
-        [ErrorHandler handleError:error];
-        return;
-    }
-    */
-    
 }
+
 
 #pragma mark - NewsListInteractorOutput
 
@@ -42,8 +36,6 @@
     [self.view hideHUD];
        if (dataList.count > 0) {
         [self.view showNewsData:dataList];
-    }else {
-        [self.view showNoContentScreen];
     }
 }
 

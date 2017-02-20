@@ -8,6 +8,11 @@
 
 
 #import <Typhoon/Typhoon.h>
+
+/**
+ Модуль отвечает за отображение списка новостей.
+ Используется как embedded-модуль.
+ */
 @interface NewsListAssembly : TyphoonAssembly
 
 @end

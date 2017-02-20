@@ -7,7 +7,8 @@
 //
 
 #import "NewsListViewController.h"
-#import "ScreenManager.h"
+#import "TopMostHUDManager.h"
+
 @interface NewsListViewController ()
 
 @property (strong,nonatomic) NSArray *newsList;
@@ -16,21 +17,8 @@
 
 @implementation NewsListViewController
 
-- (void)setup {
-    self.dataDisplayManager = [[NewsListDataDisplayManager alloc] init];
-    self.tableView.estimatedRowHeight = self.tableView.rowHeight;
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
-    self.tableView.delegate = self.dataDisplayManager;
-    self.tableView.dataSource = self.dataDisplayManager;
-    
-    [self.output updateView];
-}
-
 #pragma mark - NewsListViewInput
 
-- (void)showNoContentScreen {
-    // Show custom empty screen.
-}
 - (void)showNewsData:(NSArray *)news {
     
     [self.dataDisplayManager handleNewsData:news];
@@ -38,18 +26,31 @@
 }
 
 - (void)showHUD {
-    [[ScreenManager sharedManager] showHUDAddedToView:self.view];
+    [[TopMostHUDManager sharedManager] showHUDAddedToView:self.view];
 }
 
 - (void)hideHUD {
-    [[ScreenManager sharedManager] hideHUD];
+    [[TopMostHUDManager sharedManager] hideHUD];
 }
-#pragma mark - NewsListViewInput
+
+#pragma mark - Life circle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self setup];
+}
+
+- (void)setup {
+    
+    self.dataDisplayManager = [[NewsListDataDisplayManager alloc] init];
+    
+    self.tableView.estimatedRowHeight = self.tableView.rowHeight;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
+    self.tableView.delegate = [self.dataDisplayManager delegateForTableView:self.tableView];
+    self.tableView.dataSource = [self.dataDisplayManager dataSourceForTableView:self.tableView];
+    
+    [self.output setupViewAndStartGettingData];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
