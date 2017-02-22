@@ -8,4 +8,4 @@
 
 #import <Foundation/Foundation.h>
 
-#define baseURL @"https://lenta.ru/rss"
+extern NSString *const baseURL;

@@ -23,6 +23,7 @@
 		54973AAE1E59A811008012F2 /* ErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 54973AAD1E59A811008012F2 /* ErrorHandler.m */; };
 		54973AB21E59AC16008012F2 /* AlertHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 54973AB11E59AC16008012F2 /* AlertHelper.m */; };
 		54973AC21E5A35FA008012F2 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 54973AC11E5A35FA008012F2 /* NSDate+Extension.m */; };
+		54973AD31E5E3205008012F2 /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 54973AD21E5E3205008012F2 /* Constant.m */; };
 		54E0CF0C1E5776CA0067384E /* NewsListDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E0CF0B1E5776CA0067384E /* NewsListDataDisplayManager.m */; };
 		54E0CF151E578EBF0067384E /* NewsListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E0CF141E578EBF0067384E /* NewsListCell.m */; };
 		54E0CF1C1E579CD60067384E /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E0CF1B1E579CD60067384E /* News.m */; };
@@ -91,6 +92,7 @@
 		54973AC01E5A35FA008012F2 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
 		54973AC11E5A35FA008012F2 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
 		54973ACA1E5B6633008012F2 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		54973AD21E5E3205008012F2 /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constant.m; sourceTree = "<group>"; };
 		54E0CF0A1E5776CA0067384E /* NewsListDataDisplayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListDataDisplayManager.h; sourceTree = "<group>"; };
 		54E0CF0B1E5776CA0067384E /* NewsListDataDisplayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListDataDisplayManager.m; sourceTree = "<group>"; };
 		54E0CF131E578EBF0067384E /* NewsListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListCell.h; sourceTree = "<group>"; };
@@ -375,6 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				54973ACA1E5B6633008012F2 /* Constant.h */,
+				54973AD21E5E3205008012F2 /* Constant.m */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -660,6 +663,7 @@
 				54E0CF1C1E579CD60067384E /* News.m in Sources */,
 				54167B361E5746E6000C4444 /* NewsListViewController.m in Sources */,
 				54E0CF251E583DB70067384E /* NewsListAssembly.m in Sources */,
+				54973AD31E5E3205008012F2 /* Constant.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
