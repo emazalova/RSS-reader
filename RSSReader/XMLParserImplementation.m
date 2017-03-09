@@ -7,7 +7,7 @@
 //
 
 #import "XMLParserImplementation.h"
-#import "News.h"
+#import "NewsTableViewCellObject.h"
 
 
 @interface XMLParserImplementation() <NSXMLParserDelegate> {
@@ -41,8 +41,8 @@
  */
 - (NSArray *)sortArrayByPublicationDate:(NSMutableArray *)newsList {
     NSArray *sortedArray = [newsList sortedArrayUsingComparator:^NSComparisonResult(id firstElement, id nextElement) {
-        NSDate *firstDate = [(News*)firstElement dateOfPublication];
-        NSDate *secondDate = [(News*)nextElement dateOfPublication];
+        NSDate *firstDate = [(NewsTableViewCellObject*)firstElement dateOfPublication];
+        NSDate *secondDate = [(NewsTableViewCellObject*)nextElement dateOfPublication];
         return [secondDate compare:firstDate];
     }];
     return sortedArray;
@@ -59,7 +59,7 @@
     NSMutableArray *treatedDataList = [NSMutableArray array];
     for (int i = 0; i<parsedDataList.count; i++) {
         
-        News *news = [[News alloc] init];
+        NewsTableViewCellObject *news = [[NewsTableViewCellObject alloc] init];
         NSDictionary *favouritesData = [parsedDataList objectAtIndex:i];
         
         news.titleNews = [favouritesData objectForKey:@"title"];

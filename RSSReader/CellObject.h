@@ -14,5 +14,6 @@
  */
 
 @protocol CellObject <NSObject>
+@required
 - (Class)cellClass;
 @end

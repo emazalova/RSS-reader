@@ -1,5 +1,5 @@
 //
-//  News.h
+//  NewsTableViewCellObject.h
 //  RSSReader
 //
 //  Created by Katrin on 18.02.17.
@@ -12,7 +12,7 @@
 /**
  Модель, представляющая краткую форму новости в списке новостей
  */
-@interface News : NSObject <CellObject>
+@interface NewsTableViewCellObject : NSObject <CellObject>
 
 @property (strong,nonatomic) NSString *titleNews;
 @property (strong,nonatomic) NSString *linkSource;

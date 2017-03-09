@@ -1,5 +1,5 @@
 //
-//  NewsListCell.h
+//  NewsListTableViewCell.h
 //  RSSReader
 //
 //  Created by Katrin on 17.02.17.
@@ -12,7 +12,7 @@
 /**
  Ячейка, используемая для краткого отображения новости в списке
  */
-@interface NewsListCell : UITableViewCell <NewsListConfigurableCell>
+@interface NewsListTableViewCell : UITableViewCell <NewsListConfigurableCell>
 @property (weak,nonatomic) IBOutlet UIImageView *imageNews;
 @property (weak,nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak,nonatomic) IBOutlet UILabel *dateOfPublicationLabel;

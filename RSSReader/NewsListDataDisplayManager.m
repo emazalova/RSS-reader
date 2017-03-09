@@ -7,10 +7,9 @@
 //
 
 #import "NewsListDataDisplayManager.h"
-#import "NewsListCell.h"
 #import "CellObject.h"
+#import "NewsListConfigurableCell.h"
 
-@protocol NewsListConfigurableCell;
 @protocol CellObject;
 
 @interface NewsListDataDisplayManager() <UITableViewDataSource, UITableViewDelegate>
